@@ -1,0 +1,35 @@
+{
+  "name": "@custom-wallet/extension",
+  "version": "0.0.0",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "postexport": "yarn rename && yarn replace",
+    "rename": "mv out/_next out/next",
+    "replace": "replace-in-files --string='/_next/' --replacement='/next/' out/*.html",
+    "start": "next start",
+    "lint": "next lint",
+    "copy": "copyfiles -f public/* dist"
+  },
+  "dependencies": {
+    "copyfiles": "^2.4.1",
+    "next": "12.2.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.13",
+    "@types/react": "17.0.37",
+    "@types/react-dom": "17.0.11",
+    "eslint": "7.32.0",
+    "eslint-config-custom": "*",
+    "react": "17.0.2",
+    "renamer": "^4.0.0",
+    "replace-in-files-cli": "^2.0.0",
+    "typescript": "4.5.2"
+  }
+}

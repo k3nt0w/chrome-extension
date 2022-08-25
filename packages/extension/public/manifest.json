@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Custom Wallet",
+  "description": "Chrome Extension Sample",
+  "version": "1.0",
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
